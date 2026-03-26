@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yuanlufashion-hash.github.io/Yuanlu_Fashion/sitemap.xml
