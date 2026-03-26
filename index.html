@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XEEP452245"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-XEEP452245');
+</script>
   <!-- ===== SEO CORE ===== -->
   <title>元鹿服飾｜台灣風雪狼總代理｜休閒穿搭・運動休閒・機能服飾</title>
   <meta name="description" content="元鹿服飾為台灣風雪狼（FENGXUELANG）品牌總代理。專售休閒T恤、運動長褲、帽T、休閒外套等，適合全家大小穿搭。優質平價，款式多元。門市位於台中大雅，歡迎到店選購或線上下單。" />
@@ -954,6 +962,7 @@
   </footer>
 
   <script>
+    
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 60);
@@ -992,6 +1001,8 @@
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
     revealEls.forEach(el => observer.observe(el));
+
+    
   </script>
 </body>
 </html>
