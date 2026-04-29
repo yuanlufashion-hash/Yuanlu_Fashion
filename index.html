@@ -35,7 +35,6 @@
   <meta property="og:description" content="台灣風雪狼品牌總代理。休閒T恤、運動長褲、帽T、外套，優質平價，全家適穿。台中大雅門市＋蝦皮、LINE、FB 均可購買。" />
   <meta property="og:url" content="https://yuanlufashion-hash.github.io/Yuanlu_Fashion/" />
   <meta property="og:image" content="https://yuanlufashion-hash.github.io/Yuanlu_Fashion/og-image.jpg" />
-  <!-- ☝️ og:image 建議用 1200x630px 的橫幅圖，放一張門市或主打商品圖 -->
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -127,6 +126,9 @@
       --yellow-dark:#D4A500;
       --yellow-pale:#FFFAEB;
       --sky:        #2E9DC8;
+      --line-green: #06C755;
+      --line-dark:  #05a849;
+      --line-pale:  #e8f9ee;
       --white:      #FFFFFF;
       --off-white:  #FAFAFA;
       --text:       #1E2328;
@@ -415,6 +417,149 @@
     .lifestyle-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(0,0,0,0.22); }
     .lifestyle-btn svg { width: 16px; height: 16px; stroke: var(--teal-dark); fill: none; stroke-width: 2.5; }
 
+    /* ===== LINE COMMUNITY ===== */
+    #line-community {
+      background: linear-gradient(135deg, #f0faf4 0%, #e2f7eb 50%, #f5fef8 100%);
+      position: relative; overflow: hidden;
+      padding: 80px 6vw;
+    }
+    .line-community-deco-1 {
+      position: absolute; top: -60px; right: -60px;
+      width: 280px; height: 280px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(6,199,85,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .line-community-deco-2 {
+      position: absolute; bottom: -40px; left: -40px;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(6,199,85,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .line-community-deco-3 {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(6,199,85,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .line-community-inner {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1fr auto; gap: 4vw; align-items: center;
+      max-width: 900px; margin: 0 auto;
+    }
+    .line-community-text .lc-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(6,199,85,0.15); color: var(--line-dark);
+      font-size: 0.66rem; font-weight: 700; letter-spacing: 0.22em;
+      padding: 6px 16px; border-radius: 50px; text-transform: uppercase;
+      margin-bottom: 1.2rem; border: 1px solid rgba(6,199,85,0.25);
+    }
+    .line-community-text .lc-pill::before {
+      content: ''; width: 6px; height: 6px;
+      background: var(--line-green); border-radius: 50%;
+    }
+    .line-community-text h2 {
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: clamp(1.6rem, 4vw, 2.8rem);
+      font-weight: 900; color: var(--text);
+      letter-spacing: 0.04em; line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .line-community-text h2 .lc-hl { color: var(--line-green); }
+    .line-community-text .lc-bar {
+      width: 48px; height: 4px; border-radius: 2px;
+      background: linear-gradient(90deg, var(--line-green), #8ae8b0);
+      margin-bottom: 1.4rem;
+    }
+    .line-community-text p {
+      font-size: clamp(0.88rem, 1.6vw, 1rem);
+      line-height: 2; color: var(--text-mid);
+      max-width: 480px; margin-bottom: 1.6rem;
+    }
+    .lc-perks { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-bottom: 2rem; }
+    .lc-perk {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: white; border: 1.5px solid rgba(6,199,85,0.3);
+      border-radius: 50px; padding: 6px 14px;
+      font-size: 0.72rem; font-weight: 700; color: var(--text-mid);
+      box-shadow: 0 2px 8px rgba(6,199,85,0.08);
+    }
+    .lc-perk-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--line-green); flex-shrink: 0; }
+    .lc-join-btn {
+      display: inline-flex; align-items: center; gap: 12px;
+      padding: 16px 36px; background: var(--line-green);
+      color: white; font-size: 0.88rem; font-weight: 800;
+      letter-spacing: 0.1em; border-radius: 50px;
+      transition: all 0.3s; box-shadow: 0 8px 28px rgba(6,199,85,0.4);
+      text-decoration: none; min-height: 52px;
+    }
+    .lc-join-btn:hover {
+      background: var(--line-dark); transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(6,199,85,0.45);
+    }
+    .lc-join-btn svg { width: 20px; height: 20px; fill: white; flex-shrink: 0; }
+    .lc-join-btn .btn-arrow { width: 16px; height: 16px; stroke: white; fill: none; stroke-width: 2.5; }
+
+    /* LINE QR card */
+    .line-community-card {
+      background: white;
+      border-radius: 24px;
+      padding: 2.2rem 2rem;
+      box-shadow: 0 12px 40px rgba(6,199,85,0.18), 0 4px 16px rgba(0,0,0,0.06);
+      border: 2px solid rgba(6,199,85,0.15);
+      text-align: center;
+      min-width: 220px;
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .line-community-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 56px rgba(6,199,85,0.22), 0 8px 24px rgba(0,0,0,0.08);
+    }
+    .lc-card-icon {
+      width: 72px; height: 72px; border-radius: 22px;
+      background: var(--line-green);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.2rem; box-shadow: 0 6px 20px rgba(6,199,85,0.35);
+    }
+    .lc-card-icon svg { width: 40px; height: 40px; fill: white; }
+    .lc-card-name {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em;
+      color: var(--line-green); text-transform: uppercase; margin-bottom: 0.5rem;
+    }
+    .lc-card-title {
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 0.95rem; font-weight: 900; color: var(--text);
+      line-height: 1.5; margin-bottom: 1.2rem;
+    }
+    .lc-card-members {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      font-size: 0.72rem; color: var(--text-light); margin-bottom: 1.4rem;
+    }
+    .lc-card-members svg { width: 14px; height: 14px; stroke: var(--line-green); fill: none; stroke-width: 2; }
+    .lc-card-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; padding: 12px 20px;
+      background: var(--line-green); color: white;
+      font-size: 0.8rem; font-weight: 800; letter-spacing: 0.1em;
+      border-radius: 50px; transition: all 0.3s;
+      box-shadow: 0 4px 16px rgba(6,199,85,0.35);
+      text-decoration: none; min-height: 44px;
+    }
+    .lc-card-btn:hover { background: var(--line-dark); box-shadow: 0 8px 24px rgba(6,199,85,0.45); }
+    .lc-card-btn svg { width: 16px; height: 16px; fill: white; }
+    /* pulse ring around card */
+    .lc-pulse {
+      position: absolute; inset: -6px; border-radius: 28px;
+      border: 2px solid rgba(6,199,85,0.3);
+      animation: lcPulse 2.5s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes lcPulse {
+      0%,100% { opacity:1; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(1.02); }
+    }
+
     /* ===== CONTACT ===== */
     #contact { background: white; }
     .contact-top-strip { background: linear-gradient(90deg, var(--coral) 0%, #F08C75 100%); border-radius: 20px; padding: 2.2rem 2.8rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 3rem; }
@@ -438,6 +583,7 @@
     .cbtn-icon.fb { background: #1877F2; }
     .cbtn-icon.ig { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
     .cbtn-icon.line { background: #06C755; }
+    .cbtn-icon.linec { background: linear-gradient(135deg, #06C755, #04a847); }
     .cbtn-icon.shop { background: linear-gradient(135deg,#ee4d2d,#f5693c); }
     .cbtn-icon svg { width: 22px; height: 22px; fill: white; }
     .cbtn-label { font-size: 0.62rem; font-weight: 700; color: var(--text-light); letter-spacing: 0.14em; text-transform: uppercase; }
@@ -482,6 +628,8 @@
       .about-features { grid-template-columns: repeat(2,1fr); }
       .products-grid { grid-template-columns: repeat(2,1fr); }
       .product-card:nth-child(1) { grid-column: span 2; }
+      .line-community-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .line-community-card { max-width: 360px; margin: 0 auto; }
     }
 
     /* ===== MOBILE ===== */
@@ -493,6 +641,7 @@
       body { padding-bottom: var(--bottom-nav-h); }
       section { padding: 68px 5vw; }
       #lifestyle { padding: 0; min-height: 56vh; }
+      #line-community { padding: 60px 5vw; }
       .hero-content { padding: 0 5vw calc(9vh + var(--bottom-nav-h) + env(safe-area-inset-bottom,0px)); }
       .hero-btns { flex-direction: column; gap: 0.75rem; }
       .btn-hero-primary, .btn-hero-outline { width: 100%; justify-content: center; padding: 14px 24px; }
@@ -509,6 +658,9 @@
       .product-info { transform: translateY(0) !important; }
       .products-header { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
       .products-header p { display: none; }
+      .line-community-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .line-community-card { max-width: 100%; }
+      .lc-join-btn { width: 100%; justify-content: center; }
       .contact-grid { grid-template-columns:1fr; gap: 2.5rem; }
       .contact-top-strip { flex-direction: column; text-align: center; }
       .contact-btn:hover { transform:none; }
@@ -551,6 +703,7 @@
       <li><a href="#about">關於品牌</a></li>
       <li><a href="#features">品牌特色</a></li>
       <li><a href="#products">產品展示</a></li>
+      <li><a href="#line-community">LINE社群</a></li>
       <li><a href="#contact">聯絡我們</a></li>
     </ul>
     <a href="#contact" class="nav-cta">聯絡我們</a>
@@ -565,6 +718,7 @@
     <a href="#about" onclick="closeMobile()">關於品牌</a>
     <a href="#features" onclick="closeMobile()">品牌特色</a>
     <a href="#products" onclick="closeMobile()">產品展示</a>
+    <a href="#line-community" onclick="closeMobile()">LINE 社群</a>
     <a href="#contact" onclick="closeMobile()" class="mobile-menu-cta">聯絡我們</a>
   </div>
 
@@ -582,6 +736,10 @@
       <a href="#products" class="bottom-nav-item">
         <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         <span>產品</span>
+      </a>
+      <a href="#line-community" class="bottom-nav-item">
+        <svg viewBox="0 0 24 24"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/></svg>
+        <span>LINE</span>
       </a>
       <a href="#contact" class="bottom-nav-item">
         <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -829,6 +987,60 @@
     </div>
   </section>
 
+  <!-- ===== LINE COMMUNITY ===== -->
+  <section id="line-community">
+    <div class="line-community-deco-1"></div>
+    <div class="line-community-deco-2"></div>
+    <div class="line-community-deco-3"></div>
+    <div class="line-community-inner">
+      <div class="line-community-text reveal-left">
+        <div class="lc-pill">LINE Community</div>
+        <h2>加入我們的<br><span class="lc-hl">LINE 社群</span>！</h2>
+        <div class="lc-bar"></div>
+        <p>加入「元鹿服飾｜質感生活選物：舒服好穿的日常休閒穿搭」社群，第一時間掌握最新款式、限時優惠與穿搭靈感，讓每天的穿搭都充滿靈感！</p>
+        <div class="lc-perks">
+          <span class="lc-perk"><span class="lc-perk-dot"></span>新品搶先看</span>
+          <span class="lc-perk"><span class="lc-perk-dot"></span>專屬限時優惠</span>
+          <span class="lc-perk"><span class="lc-perk-dot"></span>穿搭靈感分享</span>
+          <span class="lc-perk"><span class="lc-perk-dot"></span>會員專屬活動</span>
+          <span class="lc-perk"><span class="lc-perk-dot"></span>即時客服諮詢</span>
+        </div>
+        <a href="https://line.me/ti/g2/L4vbPXP2lTfRoQA64rrK5Ll4-vEOxeFPwtItgw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+           target="_blank" rel="noopener" class="lc-join-btn">
+          <!-- LINE icon SVG -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+          </svg>
+          立即加入社群
+          <svg class="btn-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Card -->
+      <div class="line-community-card reveal-right">
+        <div class="lc-pulse"></div>
+        <div class="lc-card-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+          </svg>
+        </div>
+        <div class="lc-card-name">LINE 社群</div>
+        <div class="lc-card-title">元鹿服飾｜質感生活選物<br>舒服好穿的日常休閒穿搭</div>
+        <div class="lc-card-members">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          免費加入 · 隨時退出
+        </div>
+        <a href="https://line.me/ti/g2/L4vbPXP2lTfRoQA64rrK5Ll4-vEOxeFPwtItgw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+           target="_blank" rel="noopener" class="lc-card-btn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+          </svg>
+          點此加入社群
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== CONTACT ===== -->
   <section id="contact">
     <div class="contact-top-strip reveal">
@@ -906,7 +1118,20 @@
             </div>
             <div class="cbtn-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
           </a>
-          <a href="https://is.gd/4WdLn2" target="_blank" rel="noopener" class="contact-btn">
+          <!-- NEW: LINE Community button in contact -->
+          <a href="https://line.me/ti/g2/L4vbPXP2lTfRoQA64rrK5Ll4-vEOxeFPwtItgw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener" class="contact-btn">
+            <div class="cbtn-icon linec">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill="white" d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+              </svg>
+            </div>
+            <div>
+              <div class="cbtn-label">LINE 社群</div>
+              <div class="cbtn-action">加入元鹿服飾社群</div>
+            </div>
+            <div class="cbtn-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </a>
+          <a href="https://shopee.tw/ideer77" target="_blank" rel="noopener" class="contact-btn">
             <div class="cbtn-icon shop">
               <svg viewBox="0 0 24 24"><path d="M6 2l1.5 6h9L18 2H6zM4 9l2 11h12l2-11H4zm8 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
             </div>
@@ -956,6 +1181,9 @@
         <a href="https://lin.ee/TQcR45a" target="_blank" rel="noopener" class="footer-social" title="元鹿服飾 LINE">
           <svg viewBox="0 0 24 24"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/></svg>
         </a>
+        <a href="https://line.me/ti/g2/L4vbPXP2lTfRoQA64rrK5Ll4-vEOxeFPwtItgw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener" class="footer-social" title="元鹿服飾 LINE 社群">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        </a>
         <a href="https://is.gd/4WdLn2" target="_blank" rel="noopener" class="footer-social" title="元鹿服飾 蝦皮賣場">
           <svg viewBox="0 0 24 24"><path d="M6 2l1.5 6h9L18 2H6zM4 9l2 11h12l2-11H4zm8 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
         </a>
@@ -987,7 +1215,7 @@
       document.body.style.overflow = '';
     }
 
-    const sections = ['hero','about','products','contact'];
+    const sections = ['hero','about','products','line-community','contact'];
     const bottomItems = document.querySelectorAll('.bottom-nav-item');
     function updateBottomNav() {
       let current = 'hero';
